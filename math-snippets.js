@@ -7,8 +7,8 @@ const reduce = (a, b) => {
         : [a, b];
 };
 
-const reduce2nArr = (a) => {
-    const b = gcd(a[0], a[1]);
+const reduce2nArr = a => {
+    const b = gcd(...a);
     return b > 1
         ? reduce2nArr(a.map(c => c / b))
         : a;
