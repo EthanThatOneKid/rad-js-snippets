@@ -1,9 +1,10 @@
-# Rad JS Snippets
+# 🧠 Rad JavaScript Snippets
 > radical snippets for some javascript tricks that come up every now and then
 
 ## Categories
-* [math](math-snippets.js)
 * [array](array-snippets.js)
+* [function](function-snippets.js)
+* [math](math-snippets.js)
 
 ---
 
