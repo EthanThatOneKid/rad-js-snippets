@@ -3,6 +3,7 @@
 
 ## Categories
 * [math](math-snippets.js)
+* [array](array-snippets.js)
 
 ---
 
