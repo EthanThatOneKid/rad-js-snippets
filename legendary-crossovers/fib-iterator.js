@@ -1,11 +1,11 @@
-// Reference:
+// reference:
 // * [function*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*)
 // * [yield](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/yield)
 
-// This Program Should Output:
+// this program should output:
 // 0 1 1 2 3 5 8 13 21 34 55 89
 
-// Generator Function Initialized in Object
+// generator function initialized in object
 const fib = {
   *[Symbol.iterator]() {
     let a = 0, b = 1;
@@ -19,7 +19,7 @@ const fib = {
   }
 };
 
-// Iterating Through Generator Using for...of
+// iterating through generator using for...of
 for (let n of fib) {
   if (n < 100) {
     console.log(n);
