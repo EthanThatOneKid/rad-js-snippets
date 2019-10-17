@@ -16,4 +16,4 @@ const reduce2nArr = a => {
 
 const factorial = n => n == 1 ? n : n * factorial(--n);
 
-const sum = (arr, i = 0) => i < arr.length ? arr[i] + sum(arr, ++i) : 0;
+const sumArr = (arr, i = 0) => i < arr.length ? arr[i] + sum(arr, ++i) : 0;
