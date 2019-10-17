@@ -13,3 +13,5 @@ const reduce2nArr = a => {
         ? reduce2nArr(a.map(c => c / b))
         : a;
 };
+
+const factorial = n => n == 1 ? n : n * factorial(--n);
