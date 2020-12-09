@@ -1,6 +1,10 @@
 // some one-liners i made...
-const toLinkedList = arr => arr.reduceRight((a, b) => ({val: b, next: a}), null);
-const reverseLinkedList = (list, memo = null) => list == null ? memo : reverseLinkedList(list.next, {val: list.val, next: memo});
+const toLinkedList = arr =>
+  arr.reduceRight((next, val) => ({ val, next }), null);
+const reverseLinkedList = (list, memo = null) =>
+  list !== null
+    ? reverseLinkedList(list.next, { val: list.val, next: memo })
+    : memo;
 
 // chainify returns a function that returns the given functions' chained result
 const chainify = (...chain) => arg => chain.reduce((a, b) => b(a), arg);
