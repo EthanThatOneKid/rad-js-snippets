@@ -1,4 +1,4 @@
-# 🧠 Rad JavaScript Snippets
+# Radical JavaScript Snippets 🧠
 
 > Some radical snippets for some JavaScript tricks that come up every now and then.
 
