@@ -1,9 +1,21 @@
-const chainify = (...chain) => arg => chain.reduce((a, b) => b(a), arg);
+# Function Snippets
 
-const sum = (num, ...nums) => nums.length > 0
-  ? num + sum(nums.shift(), ...nums)
-  : num;
+## `chainify`
 
+```js
+const chainify = (...chain) => (arg) => chain.reduce((a, b) => b(a), arg);
+```
+
+## `sum`
+
+```js
+const sum = (num, ...nums) =>
+  nums.length > 0 ? num + sum(nums.shift(), ...nums) : num;
+```
+
+## `checkArraysAreIdentical`
+
+```js
 const checkArraysAreIdentical = (array1, array2, ...arrays) => {
   if (array1.length !== array2.length) {
     return false;
@@ -17,3 +29,4 @@ const checkArraysAreIdentical = (array1, array2, ...arrays) => {
     ? checkArraysAreIdentical(array2, arrays.shift(), ...arrays)
     : true;
 };
+```

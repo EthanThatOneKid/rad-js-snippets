@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setIdleTimeout Example</title>
+  </head>
+  <body>
+    <script>
+      const setIdleTimeout = (...args) => {
+        let timeoutId = setTimeout(...args);
+        const alertUserAction = () => {
+          clearTimeout(timeoutId);
+          timeoutId = setTimeout(...args);
+        };
+        return alertUserAction;
+      };
+      let start = Date.now();
+      const delay = 5e3;
+      const callThisFunctionWhenUserClicksTheButton = setIdleTimeout(
+        alert,
+        delay,
+        "Timer is up!"
+      );
+      const btn = document.createElement("button");
+      document.body.appendChild(btn);
+      const animate = () => {
+        const timeRemaining = ((delay - (Date.now() - start)) / 1000).toFixed(
+          2
+        );
+        btn.textContent = `Click to reset timer (${timeRemaining}s remaining)`;
+        requestAnimationFrame(animate);
+      };
+      btn.addEventListener("click", () => {
+        start = Date.now();
+        callThisFunctionWhenUserClicksTheButton();
+      });
+      animate();
+    </script>
+  </body>
+</html>
