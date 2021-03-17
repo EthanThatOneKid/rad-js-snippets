@@ -4,9 +4,9 @@
 
 ## Categories
 
-* [array](array-snippets.js)
-* [function](function-snippets.js)
-* [math](math-snippets.js)
+* [arrays](arrays)
+* [functions](functions)
+* [math](math)
 
 ---
 
